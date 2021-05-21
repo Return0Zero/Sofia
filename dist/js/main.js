@@ -80,4 +80,11 @@ textForm.addEventListener('submit', e => {
    textInput.blur();
 });
 
-// 
+// Rate value change
+rate.addEventListener('change', e => rateValue.textContent = rate.value)
+
+// Rate value change
+pitch.addEventListener('change', e => pitchValue.textContent = picth.value)
+
+// voice select change 
+voiceSelect.addEventListener('change', e => speak());
