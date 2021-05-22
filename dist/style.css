@@ -1,0 +1,58 @@
+* {
+    margin:0;
+    padding:0;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    width: 120%;
+    height: 120%;
+    background-image: url("img/fondo.png");
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.logo {
+    width: 478px;
+
+}
+
+.navbar-hamburger {
+    width: 500px;
+    height: 80%;
+    background-color: turquoise;
+    position: fixed;
+    top: 0;
+    right: -500px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 20% 0 0 60%;
+}
+
+.change {
+    right: 0;
+}
+
+.hamburger-menu {
+    width: 30px;
+    height: 30px;
+    position: fixed;
+    background-image: url(img/settings.png);
+    background-size: cover;
+    top: 50px;
+    right: 50px;
+    cursor: pointer;
+}
+
+.nav-list {
+    text-align: center;
+}
+
+.form-group {
+    text-decoration: none;
+    list-style: none;
+    margin: 25px;
+    font-size: 30px;
+}
+

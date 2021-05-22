@@ -9,6 +9,13 @@ const rate = document.querySelector('#rate');
 const rateValue = document.querySelector('#rate-value');
 const pitch = document.querySelector('#pitch');
 const pitchValue = document.querySelector('#pitch-value');
+const menuIcon = document.querySelector('.hamburger-menu');
+const navbarHamburger = document.querySelector('navbar-hamburger');
+
+// Hamburger Menu
+menuIcon.addEventListener('click', () => {
+    navbarHamburger.classList.toggle('change');
+}
 
 // Init voice array
 let voices = [];
@@ -59,7 +66,7 @@ const speak = () => {
         voices.forEach(voice => {
             if(voice.name === selectedVoice) {
                 speakText.voice = voice;
-            }
+            }        
         });
 
         // Set pitch and rate
