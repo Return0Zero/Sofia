@@ -10,12 +10,7 @@ const rateValue = document.querySelector('#rate-value');
 const pitch = document.querySelector('#pitch');
 const pitchValue = document.querySelector('#pitch-value');
 const menuIcon = document.querySelector('.hamburger-menu');
-const navbarHamburger = document.querySelector('navbar-hamburger');
-
-// Hamburger Menu
-menuIcon.addEventListener('click', () => {
-    navbarHamburger.classList.toggle('change');
-}
+const navbarHamburger = document.querySelector('.navbar-hamburger');
 
 // Init voice array
 let voices = [];
@@ -95,3 +90,8 @@ pitch.addEventListener('change', e => pitchValue.textContent = picth.value)
 
 // voice select change 
 voiceSelect.addEventListener('change', e => speak());
+
+// Hamburger Menu
+menuIcon.addEventListener("click", () => {
+    navbarHamburger.classList.toggle("change");
+})
