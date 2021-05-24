@@ -82,6 +82,13 @@ textForm.addEventListener('submit', e => {
    speak();
    textInput.blur();
 });
+// Text form submit
+textForm.addEventListener('submit', e => {
+    e.preventDefault();
+    speak();
+    textInput.blur();
+ });
+ 
 
 // Rate value change
 rate.addEventListener('change', e => rateValue.textContent = rate.value)
