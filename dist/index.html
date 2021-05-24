@@ -9,17 +9,15 @@
 </head>
 
 <body class="body">
+    <h1 class="title">Ventanilla 5</h1>
     <div class="container">
         
-        <div class="row">
-            <div>
-                <div class="topMenu">
-                    <p>Ventanilla 5</p>
+        <div class="main-container">
+             
+             <form>
+                <div class="text">
+                    <textarea name="" id="text-input" placeholder="Escriba su mensaje..."></textarea>
                 </div>
-                <form>
-                    <div class="text">
-                        <textarea name="" id="text-input" placeholder="Escriba su mensaje..."></textarea>
-                    </div>
                 <nav class="navbar-hamburger">   
                     <div class="hamburger-menu"></div>  
                     <ul class="nav-list">
@@ -29,7 +27,7 @@
                             <input type="range" id="rate" class="custom-range" min="0.5" max="2" value=".8" step="0.1">
                         </li>
                         <li class="form-group">
-                           <label for="pitch">Pitch</label>
+                        <label for="pitch">Pitch</label>
                             <div id="pitch-value">1</div>
                             <input type="range" id="pitch" class="custom-range" min="0" max="2" value="1" step="0.1">
                         </li>
@@ -38,10 +36,22 @@
                         </li>        
                     </ul>                           
                 </nav>     
-                    <button class="call-button">Llamar</button>
+                <button class="call-button">llamar</button>
+                <button class="next">siguiente</button>
+            </form>
+            <div class="extras">
+                <form>
+                    <label class="actualmente">Actualmente</label>
+                    <p class="nombre-extra">Atendiendo actualmente...</p>
+                </form>
+                <form>
+                    <label class="anterior">Anterior</label>
+                    <p class="nombre-extra">Atendido Anteriormente</p>
                 </form>
             </div>
-            <img class="logo" src="img/LOGODC.png" alt="logo">
+            <div class="footer">
+                <img class="logo" src="img/LOGODC.png" alt="logo">
+            </div>
         </div>
 
     </div>

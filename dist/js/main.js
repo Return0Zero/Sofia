@@ -4,6 +4,7 @@ const synth = window.speechSynthesis;
 // Dom Elements
 const textForm = document.querySelector('form');
 const textInput = document.querySelector('#text-input');
+const title = document.querySelector('#title');
 const voiceSelect = document.querySelector('#voice-select');
 const rate = document.querySelector('#rate');
 const rateValue = document.querySelector('#rate-value');
@@ -86,7 +87,7 @@ textForm.addEventListener('submit', e => {
 rate.addEventListener('change', e => rateValue.textContent = rate.value)
 
 // Rate value change
-pitch.addEventListener('change', e => pitchValue.textContent = picth.value)
+pitch.addEventListener('change', e => pitchValue.textContent = pitch.value)
 
 // voice select change 
 voiceSelect.addEventListener('change', e => speak());
