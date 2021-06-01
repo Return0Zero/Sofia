@@ -41,8 +41,8 @@ body {
 
 .navbar-hamburger {
     width: 500px;
-    height: 90.3%;
-    background-color: rgba(0, 0, 0, 0.5);
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.9);
     position: fixed;
     top: 0;
     right: -500px;
@@ -50,6 +50,7 @@ body {
     justify-content: center;
     align-items: center;
     border-radius: 20% 0 0 20%;
+    z-index: 2;
 }
 
 .change {
@@ -57,11 +58,13 @@ body {
 }
 
 .hamburger-menu {
-    width: 30px;
-    height: 30px;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
     position: fixed;
     background-image: url(img/settings.png);
     background-size: cover;
+    background-color: rgba(255, 255, 255, 0.9);
     top: 42px;
     right: 50px;
     cursor: pointer;
