@@ -133,6 +133,6 @@ textarea {
     height: 900px;
     position: fixed;
     bottom: 1px;
-    left: 45%;
+    right: 15%;
     z-index: -1;
 }
