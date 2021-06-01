@@ -12,6 +12,7 @@ const pitch = document.querySelector('#pitch');
 const pitchValue = document.querySelector('#pitch-value');
 const menuIcon = document.querySelector('.hamburger-menu');
 const navbarHamburger = document.querySelector('.navbar-hamburger');
+const ventanilla = document.querySelector('.ventanilla');
 
 // Init voice array
 let voices = [];
@@ -74,6 +75,42 @@ const speak = () => {
 
 };
 
+// Speak2
+const speak2 = () => {
+    // Check if Speaking
+    if(synth.speaking) {
+        console.error('Llamando a alguien... Intente nuevamente')
+    }
+    if(ventanilla.value !== ''){
+    // Get speak text
+        const speakText = new SpeechSynthesisUtterance(ventanilla.value);
+        //Speak end
+        speakText.onend = e => {
+            console.log('Llamada Finalizada')
+        }
+        //Speak error
+        speakText.onerror = e => {
+            console.error('A ocurrido el siguiente error?')
+        }
+        //Selected voice
+        const selectedVoice = voiceSelect.selectedOptions[0]
+        .getAttribute('data-name');
+        //Loop through voices
+        voices.forEach(voice => {
+            if(voice.name === selectedVoice) {
+                speakText.voice = voice;
+            }        
+        });
+
+        // Set pitch and rate
+        speakText.rate = rate.value;
+        speakText.pitch = pitch.value;
+        // Speak
+        synth.speak(speakText);
+    }
+
+};
+
 // Event Listener
 
 // Text form submit
@@ -85,8 +122,8 @@ textForm.addEventListener('submit', e => {
 // Text form submit
 textForm.addEventListener('submit', e => {
     e.preventDefault();
-    speak();
-    textInput.blur();
+    speak2();
+    ventanilla.blur();
  });
  
 
