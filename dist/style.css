@@ -21,10 +21,13 @@ body {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     width: 120%;
     height: 120%;
-    background-image: url("img/fondo.jpg");
+    background-image: url("img/nubes.jpg");
     background-size: cover;
     background-repeat: no-repeat;
+    background-attachment: fixed;
 }
+
+
 
 .logo {
     width: 478px;
@@ -72,6 +75,36 @@ body {
     font-size: 30px;
 }
 
+.text {
+    position: absolute;
+    background-color: seashell;
+    width: 60%;
+    height: 300px;
+    left: 20%;
+    top: 20%;
+}
+
+textarea {
+    position: relative;
+    
+    background-color:rgba(255, 255, 255, 0.5));
+    resize: none;
+    outline: none;
+    width: 80%;
+    height: 100px;
+    top: 30px;
+    left: 9.5%;
+}
+
+.call-button {
+    position: absolute;
+    left: 47.5%;
+    top: 35%;
+    background-color:rgba(255, 255, 255, 0.1));
+    width: 100px;
+    height: 50px;
+}
+
 .footer {
     position: absolute;
     width: 100%;
@@ -79,4 +112,12 @@ body {
     background-color: blue;
     bottom: 0;
     margin: auto;
+}
+
+.bandera {
+    height: 900px;
+    position: fixed;
+    bottom: 132px;
+    left: 40%;
+    z-index: -1;
 }
