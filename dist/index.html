@@ -8,49 +8,44 @@
     <title>Ventanilla 5</title>
 </head>
 
-<body class="body">
+<body id="body">
     <div class="titulo">
         <p class="title">Sección Consular Washington DC</p>
     </div>
-    <div class="container">
-        <div class="main-container">
-             <form>
-                <div class="text">
-                    <textarea name="" id="text-input" placeholder="..." required>Ventanilla 5</textarea>
-                </div>
-                <nav class="navbar-hamburger">   
-                    <div class="hamburger-menu"></div>  
-                    <ul class="nav-list">
-                        <li class="form-group">
-                            <label for="rate">Rate</label>
-                            <div id="rate-value">0.8</div>
-                            <input type="range" id="rate" class="custom-range" min="0.5" max="2" value=".8" step="0.1">
-                        </li>
-                        <li class="form-group">
-                        <label for="pitch">Pitch</label>
-                            <div id="pitch-value">1</div>
-                            <input type="range" id="pitch" class="custom-range" min="0" max="2" value="1" step="0.1">
-                        </li>
-                        <li class="form-group">
-                                <select id="voice-select"></select>  
-                        </li>        
-                    </ul>                           
-                </nav>     
-                <button class="call-button">llamar</button>
-            </form>
-            <div class="extras">
-            </div>
-           
-            <div class="footer">
-                <img class="logo" src="img/LOGODC.png" alt="logo">
-                <div class="fondo">
-                    <img class="bandera" src="img/bandera.png" alt="bandera">
-                </div>
-            </div>
-        </div>
-        
-    </div>
+    <div id="main-container">
+        <form id="form">
+            <div class="text">
+                <textarea name="" id="text-input" textmode="multiline" required>...
 
+Ventanilla 5</textarea>
+            </div>
+            <nav class="navbar-hamburger">   
+                <div class="hamburger-menu"></div>  
+                <ul class="nav-list">
+                    <li class="form-group">
+                        <label for="rate">Rate</label>
+                        <div id="rate-value">0.8</div>
+                        <input type="range" id="rate" class="custom-range" min="0.5" max="2" value=".8" step="0.1">
+                    </li>
+                    <li class="form-group">
+                     <label for="pitch">Pitch</label>
+                        <div id="pitch-value">1</div>
+                        <input type="range" id="pitch" class="custom-range" min="0" max="2" value="1" step="0.1">
+                    </li>
+                    <li class="form-group">
+                        <select id="voice-select"></select>  
+                    </li>        
+                </ul>                           
+            </nav>     
+            <button class="call-button">llamar</button>
+        </form>
+    </div>       
+    <div class="footer">
+        <img class="logo" src="img/LOGODC.png" alt="logo">
+            <div class="fondo">
+                <img class="bandera" src="img/bandera.png" alt="bandera">
+            </div>
+    </div>
     <script src="js/main.js"></script>
 </body>
 </html>
