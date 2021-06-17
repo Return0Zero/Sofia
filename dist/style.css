@@ -1,6 +1,8 @@
 * {
     margin:0;
     padding:0;
+    
+    overflow: hidden;
 }
 
 body {
@@ -11,9 +13,6 @@ body {
     background-attachment: fixed;
 }
 
-#main-container {
-
-}
 
 #form {
     position: absolute;
@@ -71,7 +70,7 @@ body {
     background-size: cover;
     background-color: rgba(255, 255, 255, 0.9);
     top: 2.5%;
-    right: 50px;
+    right: 2%;
     cursor: pointer;
 }
 
