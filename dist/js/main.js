@@ -2,9 +2,9 @@
 const synth = window.speechSynthesis;
 
 // Dom Elements
-const textForm = document.querySelector('form');
-const textInput = document.querySelector('#text-input');
-const title = document.querySelector('#title');
+var textForm = document.querySelector('form');
+var textInput = document.querySelector('#text-input');
+var title = document.querySelector('#title');
 const voiceSelect = document.querySelector('#voice-select');
 const rate = document.querySelector('#rate');
 const rateValue = document.querySelector('#rate-value');
@@ -12,18 +12,17 @@ const pitch = document.querySelector('#pitch');
 const pitchValue = document.querySelector('#pitch-value');
 const menuIcon = document.querySelector('.hamburger-menu');
 const navbarHamburger = document.querySelector('.navbar-hamburger');
-const ventanilla = document.querySelector('.ventanilla');
 
 // Init voice array
 let voices = [];
 
-const getVoices = () => {
+var getVoices = () => {
     voices = synth.getVoices();
 
     //loop through voices and create an option for each one
     voices.forEach(voice => {
         // Create option element
-        const option = document.createElement('option');
+        var option = document.createElement('option');
         // Fill option with voice and language
         option.textContent = voice.name + '('+voice.lang +')';
 
@@ -40,7 +39,7 @@ if (synth.onvoiceschanged !== undefined) {
 }
 
 // Speak
-const speak = () => {
+var speak = () => {
     // Check if Speaking
     if(synth.speaking) {
         console.error('Llamando a alguien... Intente nuevamente')
@@ -75,41 +74,7 @@ const speak = () => {
 
 };
 
-// Speak2
-const speak2 = () => {
-    // Check if Speaking
-    if(synth.speaking) {
-        console.error('Llamando a alguien... Intente nuevamente')
-    }
-    if(ventanilla.value !== ''){
-    // Get speak text
-        const speakText = new SpeechSynthesisUtterance(ventanilla.value);
-        //Speak end
-        speakText.onend = e => {
-            console.log('Llamada Finalizada')
-        }
-        //Speak error
-        speakText.onerror = e => {
-            console.error('A ocurrido el siguiente error?')
-        }
-        //Selected voice
-        const selectedVoice = voiceSelect.selectedOptions[0]
-        .getAttribute('data-name');
-        //Loop through voices
-        voices.forEach(voice => {
-            if(voice.name === selectedVoice) {
-                speakText.voice = voice;
-            }        
-        });
 
-        // Set pitch and rate
-        speakText.rate = rate.value;
-        speakText.pitch = pitch.value;
-        // Speak
-        synth.speak(speakText);
-    }
-
-};
 
 // Event Listener
 
@@ -119,13 +84,6 @@ textForm.addEventListener('submit', e => {
    speak();
    textInput.blur();
 });
-// Text form submit
-textForm.addEventListener('submit', e => {
-    e.preventDefault();
-    speak2();
-    ventanilla.blur();
- });
- 
 
 // Rate value change
 rate.addEventListener('change', e => rateValue.textContent = rate.value)
