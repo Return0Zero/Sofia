@@ -41,19 +41,20 @@ body {
 
 
 .logo {
-    width: 478px;
+    width: 30%;
     display: block;
     margin-left: auto;
     margin-right: auto;
 }
 
 .navbar-hamburger {
-    width: 500px;
+    width: 50%;
+    min-width: 100px;
     height: 100%;
     background-color: rgba(0, 0, 0, 0.9);
     position: fixed;
     top: 0;
-    right: -500px;
+    right: -50%;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -62,8 +63,8 @@ body {
 }
 
 .hamburger-menu {
-    width: 40px;
-    height: 40px;
+    width: 2.5em;
+    height: 2.5em;
     border-radius: 50%;
     position: fixed;
     background-image: url(img/settings.png);
